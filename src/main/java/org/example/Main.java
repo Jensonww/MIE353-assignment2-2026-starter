@@ -38,7 +38,7 @@ public class Main {
         CMS.commit();
         
         // EXTRA MAIN FUNCTION CALLS CAN GO BELOW:
-
+        saveGradCourses();
 
         
       }
@@ -88,6 +88,13 @@ public class Main {
   public static void loadTranscriptData() throws SQLException {
     CMS.addSqlChange(ctx -> {
       LoadTranscript.execute(ctx);
+    });
+    CMS.commit();
+  }
+
+  public static void saveGradCourses() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      SaveGradCourses.execute(ctx);
     });
     CMS.commit();
   }
