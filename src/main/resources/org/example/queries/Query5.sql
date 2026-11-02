@@ -1,3 +1,4 @@
+-- Professors who teach at least one course and have never given a failing grade
 COPY (
     SELECT p.firstName || ' ' || p.lastName AS fullName
     FROM professor p

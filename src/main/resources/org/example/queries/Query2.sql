@@ -1,3 +1,4 @@
+-- Names of fourth-year courses
 COPY (
     SELECT DISTINCT courseName
     FROM course

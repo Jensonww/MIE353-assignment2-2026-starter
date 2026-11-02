@@ -1,3 +1,4 @@
+-- Pairs of students with at least 3 courses in common
 COPY (
     SELECT s1.firstName || ' ' || s1.lastName AS student1,
            s2.firstName || ' ' || s2.lastName AS student2,

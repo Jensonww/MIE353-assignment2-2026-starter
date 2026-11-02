@@ -1,3 +1,4 @@
+-- Students who took "Data Modelling" and got 90 or above in at least one course not named "Data Modelling"
 COPY (
     SELECT s.firstName || ' ' || s.lastName AS fullName
     FROM student s

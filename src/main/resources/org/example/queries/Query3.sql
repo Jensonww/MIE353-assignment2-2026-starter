@@ -1,3 +1,4 @@
+-- Full names of professors teaching exactly one course
 COPY (
     SELECT p.firstName || ' ' || p.lastName AS fullName
     FROM professor p

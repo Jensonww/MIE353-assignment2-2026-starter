@@ -1,3 +1,4 @@
+-- Full names of professors who have taught at least one course taken by Rebecca Ward
 COPY (
     SELECT DISTINCT p.firstName || ' ' || p.lastName AS fullName
     FROM student s

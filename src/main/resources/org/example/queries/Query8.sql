@@ -1,5 +1,7 @@
+-- Per student and department: grade in lowest-level vs highest-level course
 COPY (
     WITH parsed AS (
+        -- Split courseId into department and numeric course number
         SELECT tr.studentId,
                tr.courseId,
                tr.grade,

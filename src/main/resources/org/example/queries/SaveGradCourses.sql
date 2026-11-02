@@ -1,3 +1,4 @@
+-- Courses graduate students may enrol in, excluding the gradCourse column
 COPY (
     SELECT courseId, courseName
     FROM course
