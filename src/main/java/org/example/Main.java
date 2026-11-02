@@ -39,6 +39,12 @@ public class Main {
         
         // EXTRA MAIN FUNCTION CALLS CAN GO BELOW:
         saveGradCourses();
+        query1CountHighGradesMie301();
+        query2FourthYearCourseNames();
+        query3ProfsTeachingOneCourse();
+        query4ProfsOfRebeccaWard();
+        query5ProfsWithNoFailingGrades();
+        query6DataModellingHighAchievers();
 
         
       }
@@ -95,6 +101,48 @@ public class Main {
   public static void saveGradCourses() throws SQLException {
     CMS.addSqlChange(ctx -> {
       SaveGradCourses.execute(ctx);
+    });
+    CMS.commit();
+  }
+
+  public static void query1CountHighGradesMie301() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      Query1.execute(ctx);
+    });
+    CMS.commit();
+  }
+
+  public static void query2FourthYearCourseNames() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      Query2.execute(ctx);
+    });
+    CMS.commit();
+  }
+
+  public static void query3ProfsTeachingOneCourse() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      Query3.execute(ctx);
+    });
+    CMS.commit();
+  }
+
+  public static void query4ProfsOfRebeccaWard() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      Query4.execute(ctx);
+    });
+    CMS.commit();
+  }
+
+  public static void query5ProfsWithNoFailingGrades() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      Query5.execute(ctx);
+    });
+    CMS.commit();
+  }
+
+  public static void query6DataModellingHighAchievers() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      Query6.execute(ctx);
     });
     CMS.commit();
   }
