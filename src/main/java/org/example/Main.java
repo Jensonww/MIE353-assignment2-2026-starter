@@ -45,7 +45,8 @@ public class Main {
         query4ProfsOfRebeccaWard();
         query5ProfsWithNoFailingGrades();
         query6DataModellingHighAchievers();
-
+        query7StudentPairsWithCommonCourses();
+        query8LowestVsHighestLevelGrades();
         
       }
       catch (Exception e) {
@@ -143,6 +144,20 @@ public class Main {
   public static void query6DataModellingHighAchievers() throws SQLException {
     CMS.addSqlChange(ctx -> {
       Query6.execute(ctx);
+    });
+    CMS.commit();
+  }
+
+  public static void query7StudentPairsWithCommonCourses() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      Query7.execute(ctx);
+    });
+    CMS.commit();
+  }
+
+  public static void query8LowestVsHighestLevelGrades() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      Query8.execute(ctx);
     });
     CMS.commit();
   }
